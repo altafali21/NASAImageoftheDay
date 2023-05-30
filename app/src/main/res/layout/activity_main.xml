@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#688576"
+    tools:context=".MainActivity">
+
+    <DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="0dp" />
+
+    <Button
+        android:id="@+id/searchButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#0000FF"
+        android:text="Search"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <ListView
+        android:id="@+id/imageListView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/randomButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="Random"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="281dp"
+        tools:layout_editor_absoluteY="432dp" />
+
+    <Button
+        android:id="@+id/potdButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:text="Picture of the day"
+        android:textColor="#FFFFFF"
+        tools:layout_editor_absoluteX="109dp"
+        tools:layout_editor_absoluteY="490dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
