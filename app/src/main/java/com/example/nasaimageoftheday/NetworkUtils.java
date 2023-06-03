@@ -1,3 +1,4 @@
+package com.example.nasaimageoftheday;
 import java.net.URL;
 import java.net.HttpURLConnection;
 import java.io.IOException;

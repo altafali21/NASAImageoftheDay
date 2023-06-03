@@ -7,12 +7,46 @@
     android:background="#688576"
     tools:context=".MainActivity">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp"
+        android:theme="@style/ThemeOverlay.AppCompat.ActionBar"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="Main Drawer">
+
+
+
+        <com.google.android.material.navigation.NavigationView
+            android:id="@+id/navigation_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="start"
+            android:contentDescription="Navigation View">
+
+
+
+        </com.google.android.material.navigation.NavigationView>
+
+    </androidx.drawerlayout.widget.DrawerLayout>
+
     <DatePicker
         android:id="@+id/datePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="0dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
 
     <Button
         android:id="@+id/searchButton"
@@ -21,14 +55,17 @@
         android:background="#0000FF"
         android:text="Search"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="432dp" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toEndOf="@+id/datePicker"
+        android:layout_marginStart="16dp" />
 
     <ListView
         android:id="@+id/imageListView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="1" />
+        app:layout_constraintTop_toBottomOf="@+id/datePicker"
+        app:layout_constraintBottom_toTopOf="@+id/randomButton" />
 
     <Button
         android:id="@+id/randomButton"
@@ -37,8 +74,10 @@
         android:background="#000000"
         android:text="Random"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="281dp"
-        tools:layout_editor_absoluteY="432dp" />
+        app:layout_constraintBottom_toTopOf="@+id/potdButton"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="16dp" />
 
     <Button
         android:id="@+id/potdButton"
@@ -47,7 +86,27 @@
         android:background="#000000"
         android:text="Picture of the day"
         android:textColor="#FFFFFF"
-        tools:layout_editor_absoluteX="109dp"
-        tools:layout_editor_absoluteY="490dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintStart_toEndOf="@+id/randomButton"
+        android:layout_marginStart="16dp" />
+
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="@+id/imageListView"
+        app:layout_constraintBottom_toBottomOf="@+id/imageListView"
+        app:layout_constraintStart_toStartOf="@+id/imageListView"
+        app:layout_constraintEnd_toEndOf="@+id/imageListView" />
+
+    <EditText
+        android:id="@+id/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/enter_text_hint"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">NASA Image of the Day</string>
+    <string name="app_name" translatable="false">NASA Image of the Day</string>
+    <string name="secondary_language" translatable="false">fr-ca</string>
+
+    <resources>
+        <string name="welcome_message">Welcome!</string>
+        <string name="hello">Hello</string>
+        <string name="goodbye">Goodbye</string>
+        <string name="navigation_drawer_open">Open navigation drawer</string>
+        <string name="navigation_drawer_close">Close navigation drawer</string>
+        <string name="enter_text_hint">Enter text here</string>
+
+    </resources>
+
 </resources>
